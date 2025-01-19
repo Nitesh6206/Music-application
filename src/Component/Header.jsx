@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { FaHeart } from 'react-icons/fa'; // Import the heart icon from react-icons/fa
 
 const Header = () => {
   return (
@@ -16,7 +18,14 @@ const Header = () => {
         <button className="btn btn-outline-success" type="submit">
           Search
         </button>
+      {/* Add the Favorite Icon */}
+      <div className="ms-3">
+        <Link to="/favorites" className="text-white">
+          <FaHeart size={24} /> {/* Favorite Icon */}
+        </Link>
       </div>
+      </div>
+      
     </div>
   );
 }

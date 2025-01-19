@@ -1,14 +1,19 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import FavoritesPage from './Component/FaviouretsPage';
 import MusicPlayer from './Component/MusicPlayer';
-import Header from './Component/Header';
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="app">
-      {/* <Header/> */}
-      <MusicPlayer/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MusicPlayer />} /> 
+        <Route path="/favorites" element={<FavoritesPage />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
