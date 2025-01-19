@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const MusicPlayer = () => {
   const [tracks, setTracks] = useState([]);
@@ -43,6 +43,10 @@ const MusicPlayer = () => {
       setLoading(false);
     }
   };
+  useEffect(() => {
+    musicData()
+  }, [])
+  
 
   return (
     <div>
